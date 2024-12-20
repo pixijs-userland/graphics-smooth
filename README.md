@@ -1,12 +1,12 @@
 # PixiJS Smooth Graphics
 PixiJS v7 plugin for making smooth shapes using HHAA shader.
 
-[![Build](https://github.com/pixijs/graphics-smooth/workflows/Build/badge.svg)](https://github.com/pixijs/graphics-smooth/actions?query=workflow%3A%22Build%22) [![npm version](https://badge.fury.io/js/%40pixi%2Fgraphics-smooth.svg)](https://badge.fury.io/js/%40pixi%2Fgraphics-smooth)
+[![Build](https://github.com/pixijs-userland/graphics-smooth/workflows/Build/badge.svg)](https://github.com/pixijs-userland/graphics-smooth/actions?query=workflow%3A%22Build%22) [![npm version](https://badge.fury.io/js/%40pixi%2Fgraphics-smooth.svg)](https://badge.fury.io/js/%40pixi%2Fgraphics-smooth)
 
 ### :link: Links
 
-* [Examples](https://pixijs.io/graphics-smooth/examples/index.html)
-* [API Docs](https://pixijs.io/graphics-smooth/docs/index.html)
+* [Examples](https://userland.pixijs.io/graphics-smooth/examples/index.html)
+* [API Docs](https://userland.pixijs.io/graphics-smooth/docs/index.html)
 
 ## Features
 
