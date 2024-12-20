@@ -510,12 +510,12 @@ export class SmoothGraphics extends Container
         return this.drawShape(new Ellipse(x, y, width, height));
     }
 
-    public drawPolygon(...path: Array<number> | Array<Point>): this;
-    public drawPolygon(path: Array<number> | Array<Point> | Polygon): this;
+    public drawPolygon(...path: Array<number> | Array<IPointData>): this;
+    public drawPolygon(path: Array<number> | Array<IPointData> | Polygon): this;
 
     public drawPolygon(...path: any[]): this
     {
-        let points: Array<number> | Array<Point>;
+        let points: Array<number> | Array<IPointData>;
         let closeStroke = true;// !!this._fillStyle;
 
         const poly = path[0] as Polygon;
