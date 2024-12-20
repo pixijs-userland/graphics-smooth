@@ -1,5 +1,5 @@
-import { SmoothGraphicsData } from './SmoothGraphicsData';
 import { BuildData } from './BuildData';
+import { SmoothGraphicsData } from './SmoothGraphicsData';
 
 /**
  * @memberof PIXI.smooth

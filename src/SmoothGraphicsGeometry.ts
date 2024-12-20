@@ -1,28 +1,25 @@
-import { SmoothGraphicsData } from './core/SmoothGraphicsData';
-
-import { FILL_COMMANDS } from './shapes';
-
 import {
     Buffer,
     Color,
     Geometry,
-    Texture,
-    WRAP_MODES,
-    TYPES,
-    SHAPES,
-    Point,
     Matrix,
+    Point,
+    SHAPES,
+    Texture,
+    TYPES,
+    WRAP_MODES,
 } from '@pixi/core';
-
 import { Bounds } from '@pixi/display';
-
-import type { Circle, Ellipse, Polygon, Rectangle, RoundedRectangle, IPointData } from '@pixi/core';
-import { BuildData } from './core/BuildData';
-import { SegmentPacker } from './core/SegmentPacker';
-import { LineStyle } from './core/LineStyle';
-import { FillStyle } from './core/FillStyle';
-import { BatchPart } from './core/BatchPart';
 import { BatchDrawCall, IGraphicsBatchSettings, matrixEquals } from './core/BatchDrawCall';
+import { BatchPart } from './core/BatchPart';
+import { BuildData } from './core/BuildData';
+import { FillStyle } from './core/FillStyle';
+import { LineStyle } from './core/LineStyle';
+import { SegmentPacker } from './core/SegmentPacker';
+import { SmoothGraphicsData } from './core/SmoothGraphicsData';
+import { FILL_COMMANDS } from './shapes';
+
+import type { Circle, Ellipse, IPointData, Polygon, Rectangle, RoundedRectangle } from '@pixi/core';
 
 /*
  * Complex shape type

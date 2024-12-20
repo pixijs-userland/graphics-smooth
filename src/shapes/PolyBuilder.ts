@@ -1,8 +1,9 @@
-import type { IShapeBuilder } from '../core/IShapeBuilder';
-import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
+import { Point, Polygon, utils } from '@pixi/core';
 import { BuildData } from '../core/BuildData';
 import { JOINT_TYPE } from '../core/const';
-import { Point, Polygon, utils } from '@pixi/core';
+import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
+
+import type { IShapeBuilder } from '../core/IShapeBuilder';
 
 const tempArr: Array<number> = [];
 

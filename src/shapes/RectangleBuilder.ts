@@ -1,9 +1,10 @@
-import type { Rectangle } from '@pixi/core';
-import type { IShapeBuilder } from '../core/IShapeBuilder';
-import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
 import { BuildData } from '../core/BuildData';
 import { JOINT_TYPE } from '../core/const';
+import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
 import { PolyBuilder } from './PolyBuilder';
+
+import type { Rectangle } from '@pixi/core';
+import type { IShapeBuilder } from '../core/IShapeBuilder';
 
 /**
  * @memberof PIXI.smooth

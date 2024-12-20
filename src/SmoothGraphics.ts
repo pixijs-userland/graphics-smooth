@@ -1,35 +1,34 @@
 import {
+    BLEND_MODES,
     Circle,
     Color,
+    DRAW_MODES,
     Ellipse,
+    Matrix,
+    MSAA_QUALITY,
     PI_2,
     Point,
     Polygon,
     Rectangle,
-    RoundedRectangle,
-    Matrix,
-    SHAPES,
-    utils,
-    Texture,
-    State,
     Renderer,
+    RoundedRectangle,
     Shader,
-    BLEND_MODES,
-    DRAW_MODES,
-    MSAA_QUALITY,
+    SHAPES,
+    State,
+    Texture,
+    utils,
 } from '@pixi/core';
-
-import { curves, Graphics, graphicsUtils, LINE_JOIN, LINE_CAP } from '@pixi/graphics';
-import { SmoothGraphicsGeometry } from './SmoothGraphicsGeometry';
 import { Container } from '@pixi/display';
-
-import type { ColorSource, IShape, IPointData } from '@pixi/core';
-import type { IDestroyOptions } from '@pixi/display';
+import { curves, Graphics, graphicsUtils, LINE_CAP, LINE_JOIN } from '@pixi/graphics';
 import { IGraphicsBatchSettings } from './core/BatchDrawCall';
 import { FillStyle } from './core/FillStyle';
 import { LINE_SCALE_MODE, LineStyle } from './core/LineStyle';
-import { SmoothGraphicsShader } from './SmoothShader';
 import { settings } from './settings';
+import { SmoothGraphicsGeometry } from './SmoothGraphicsGeometry';
+import { SmoothGraphicsShader } from './SmoothShader';
+
+import type { ColorSource, IPointData, IShape } from '@pixi/core';
+import type { IDestroyOptions } from '@pixi/display';
 
 const UnsmoothGraphics = Graphics;
 const { BezierUtils, QuadraticUtils, ArcUtils } = graphicsUtils;
@@ -172,7 +171,12 @@ export class SmoothGraphics extends Container
         return this._lineStyle;
     }
 
-    public lineStyle(width: number, color?: ColorSource, alpha?: number, alignment?: number, scaleMode?: LINE_SCALE_MODE): this;
+    public lineStyle(
+        width: number,
+        color?: ColorSource,
+        alpha?: number,
+        alignment?: number,
+        scaleMode?: LINE_SCALE_MODE): this;
 
     public lineStyle(options?: ILineStyleOptions): this;
 

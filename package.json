@@ -28,12 +28,12 @@
     "docsDescription": "Documentation for PixiJS Smooth Graphics library",
     "docsKeywords": "docs, documentation, pixi, pixijs, rendering, graphics, display, antialias, javascript"
   },
-  "homepage": "http://www.pixijs.com/",
-  "bugs": "https://github.com/pixijs/graphics-smooth/issues",
+  "homepage": "http://userland.pixijs.io/graphics-smooth/docs/",
+  "bugs": "https://github.com/pixijs-userland/graphics-smooth/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixijs/graphics-smooth.git"
+    "url": "https://github.com/pixijs-userland/graphics-smooth.git"
   },
   "scripts": {
     "clean": "xs clean",
@@ -67,7 +67,7 @@
   "devDependencies": {
     "@pixi/core": "^7.2.0",
     "@pixi/display": "^7.2.0",
-    "@pixi/extension-scripts": "^1.8.1",
+    "@pixi/extension-scripts": "^2.0.0",
     "@pixi/graphics": "^7.2.0"
   }
 }

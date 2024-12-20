@@ -1,7 +1,8 @@
+import { CircleBuilder } from './CircleBuilder';
+
+import type { BuildData } from '../core/BuildData';
 import type { IShapeBuilder } from '../core/IShapeBuilder';
 import type { SmoothGraphicsData } from '../core/SmoothGraphicsData';
-import type { BuildData } from '../core/BuildData';
-import { CircleBuilder } from './CircleBuilder';
 
 /**
  * @memberof PIXI.smooth
