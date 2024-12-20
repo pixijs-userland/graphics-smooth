@@ -1,0 +1,22 @@
+name: Automation
+on:
+  push:
+    branches: ['**']
+    tags: ['**']
+  release:
+    types: ['created']
+  pull_request:
+    branches: ['**']
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+    - name: Install dependencies
+      run: npm ci
+    - name: Test
+      run: npm test

@@ -1,11 +1,11 @@
 // for type only
 import { SHAPES } from '@pixi/core';
+import { BuildData } from '../core/BuildData';
+import { JOINT_TYPE } from '../core/const';
+import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
 
 import type { Circle, Ellipse, RoundedRectangle } from '@pixi/core';
 import type { IShapeBuilder } from '../core/IShapeBuilder';
-import { SmoothGraphicsData } from '../core/SmoothGraphicsData';
-import { BuildData } from '../core/BuildData';
-import { JOINT_TYPE } from '../core/const';
 
 /**
  * @memberof PIXI.smooth

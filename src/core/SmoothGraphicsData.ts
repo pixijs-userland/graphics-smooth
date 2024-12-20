@@ -1,8 +1,9 @@
-import type { Matrix, SHAPES, IShape } from '@pixi/core';
 import { LINE_CAP, LINE_JOIN } from '@pixi/graphics';
 import { JOINT_TYPE } from './const';
 import { FillStyle } from './FillStyle';
 import { LineStyle } from './LineStyle';
+
+import type { IShape, Matrix, SHAPES } from '@pixi/core';
 
 /**
  * A class to contain data useful for Graphics objects
