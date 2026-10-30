@@ -1,26 +1,29 @@
-export * from './core/BatchDrawCall';
-export * from './core/BatchPart';
-export * from './core/BuildData';
-export * from './core/const';
-export * from './core/FillStyle';
-export * from './core/IShapeBuilder';
-export * from './core/LineStyle';
-export * from './core/SegmentPacker';
-export * from './core/SmoothGraphicsData';
-export * from './DashLineShader';
-export * from './settings';
-export * from './shapes';
-export * from './SmoothGraphics';
-export * from './SmoothGraphicsGeometry';
-export * from './SmoothShader';
+import './init';
 
-/**
- * Browser namespace for PixiJS.
- * @namespace PIXI
- */
-
-/**
- * Browser namespace for SmoothGraphics.
- * @namespace smooth
- * @memberof PIXI
- */
+export * from './base/AbstractBatchableGraphics';
+export * from './base/AbstractGlGraphicsAdaptor';
+export * from './base/AbstractGpuGraphicsAdaptor';
+export * from './base/AbstractGpuGraphicsContext';
+export * from './base/AbstractGraphicsContextRenderData';
+export * from './base/AbstractGraphicsContextSystem';
+export * from './base/AbstractGraphicsPipe';
+export * from './base/GraphicsAdaptorTypes';
+export * from './canvas/CanvasSmoothGraphicsPipe';
+export * from './gl/GlSmoothGraphicsAdaptor';
+export * from './gpu/GpuSmoothGraphicsAdaptor';
+export * from './shared/BatchableSmoothGraphics';
+export * from './shared/batcher/SmoothBatcher';
+export * from './shared/batcher/SmoothBatchGeometry';
+export * from './shared/batcher/SmoothShader';
+export * from './shared/builders/buildSmoothContextData';
+export * from './shared/builders/buildSmoothFill';
+export * from './shared/builders/buildSmoothLine';
+export * from './shared/builders/SmoothCircleBuilder';
+export * from './shared/const';
+export * from './shared/DashLineShader';
+export * from './shared/GpuSmoothGraphicsContext';
+export * from './shared/SmoothBuildData';
+export * from './shared/SmoothGraphics';
+export * from './shared/SmoothGraphicsContextSystem';
+export * from './shared/SmoothGraphicsPipe';
+export * from './shared/SmoothSegmentPacker';

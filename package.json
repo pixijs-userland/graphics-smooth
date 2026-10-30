@@ -1,11 +1,12 @@
 {
   "name": "@pixi/graphics-smooth",
   "version": "1.1.1",
-  "description": "PixiJS v7 plugin for smooth HHAA rendering of shapes",
+  "description": "PixiJS v8 plugin for smooth HHAA rendering of shapes",
   "author": "Ivan Popelyshev",
   "contributors": [
     "Ivan Popelyshev <ivan.popelyshev@gmail.com>",
-    "Matt Karl <matt@mattkarl.com>"
+    "Matt Karl <matt@mattkarl.com>",
+    "Mu-Tsun Tsai <don.m.t.tsai@gmail.com>"
   ],
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
@@ -60,14 +61,10 @@
     "lib/"
   ],
   "peerDependencies": {
-    "@pixi/core": "^7.2.0",
-    "@pixi/display": "^7.2.0",
-    "@pixi/graphics": "^7.2.0"
+    "pixi.js": "^8.20.0"
   },
   "devDependencies": {
-    "@pixi/core": "^7.2.0",
-    "@pixi/display": "^7.2.0",
-    "@pixi/extension-scripts": "^2.0.0",
-    "@pixi/graphics": "^7.2.0"
+    "@pixi/extension-scripts": "^4.0.0",
+    "pixi.js": "^8.20.0"
   }
 }

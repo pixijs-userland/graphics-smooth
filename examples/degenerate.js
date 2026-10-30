@@ -1,13 +1,4 @@
-const app = new PIXI.Application({ antialias: false,
-    width: 800, height: 600,
-    backgroundColor: 0xffffff,
-    autoDensity: true, resolution: 1,
-});
-document.body.appendChild(app.view);
-
 function makeFigures(graphics) {
-    graphics.lineStyle(10, 0, 0.5);
-
     graphics.moveTo(100, 50);
     graphics.lineTo(600, 50);
     graphics.lineTo(100, 50);
@@ -28,18 +19,25 @@ function makeFigures(graphics) {
     graphics.lineTo(200, 250);
     graphics.lineTo(120, 250);
     graphics.lineTo(220, 300);
+
+    graphics.stroke({ width: 10, color: 0, alpha: 0.5 });
 }
 
-const graphics = new PIXI.smooth.SmoothGraphics();
-makeFigures(graphics);
-app.stage.addChild(graphics);
+(async () => {
+    const app = new PIXI.Application();
+    await app.init({ antialias: false,
+        width: 800, height: 600,
+        background: 0xffffff,
+        autoDensity: true, resolution: 1,
+    });
+    document.body.appendChild(app.canvas);
 
-const graphics2 = new PIXI.Graphics();
-PIXI.Graphics.prototype.drawStar = PIXI.smooth.SmoothGraphics.prototype.drawStar;
-graphics2.y = 300;
-makeFigures(graphics2);
-app.stage.addChild(graphics2);
+    const graphics = new PIXI.smooth.SmoothGraphics();
+    makeFigures(graphics);
+    app.stage.addChild(graphics);
 
-// const canvasRenderer = new PIXI.CanvasRenderer();
-// document.body.appendChild(canvasRenderer.view);
-// canvasRenderer.render(app.stage);
+    const graphics2 = new PIXI.Graphics();
+    graphics2.y = 300;
+    makeFigures(graphics2);
+    app.stage.addChild(graphics2);
+})();

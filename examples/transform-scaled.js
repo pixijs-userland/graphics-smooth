@@ -1,38 +1,36 @@
-const app = new PIXI.Application({ antialias: false,
-    width: 800, height: 600,
-    backgroundColor: 0xffffff,
-    autoDensity: true, resolution: 1,
-    autoStart: false,
-});
-document.body.appendChild(app.view);
+(async () => {
+    const app = new PIXI.Application();
+    await app.init({ antialias: false,
+        width: 800, height: 600,
+        background: 0xffffff,
+        autoDensity: true, resolution: 1,
+        autoStart: false,
+    });
+    document.body.appendChild(app.canvas);
 
-const stage = new PIXI.Container()
+    const stage = new PIXI.Container()
 
-// Smooth rectangle
-const smoothGraphic = new PIXI.smooth.SmoothGraphics();
+    // Smooth rectangle
+    const smoothGraphic = new PIXI.smooth.SmoothGraphics();
 
-smoothGraphic.lineStyle(5, 0, 1);
-smoothGraphic.drawRect(20, 20, 50, 50);
-smoothGraphic.endFill();
+    smoothGraphic.rect(20, 20, 50, 50);
+    smoothGraphic.stroke({ width: 5, color: 0, alpha: 1 });
 
-stage.addChild(smoothGraphic);
+    stage.addChild(smoothGraphic);
 
-// Original rectangle
-const graphics = new PIXI.Graphics();
+    // Original rectangle
+    const graphics = new PIXI.Graphics();
 
-graphics.lineStyle(5, 0, 1);
-graphics.drawRect(100, 20, 50, 50);
-graphics.endFill();
+    graphics.rect(100, 20, 50, 50);
+    graphics.stroke({ width: 5, color: 0, alpha: 1 });
 
-stage.addChild(graphics);
+    stage.addChild(graphics);
 
-const transform = new PIXI.Matrix();
-transform.scale(5, 5)
+    const transform = new PIXI.Matrix();
+    transform.scale(5, 5)
 
-app.renderer.render(stage, {
-    transform
-});
-
-// const canvasRenderer = new PIXI.CanvasRenderer();
-// document.body.appendChild(canvasRenderer.view);
-// canvasRenderer.render(app.stage);
+    app.renderer.render({
+        container: stage,
+        transform
+    });
+})();
